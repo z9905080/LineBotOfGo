@@ -49,14 +49,20 @@ func main() {
 				case *linebot.TextMessage:
 					log.Println("MsgID:", message.ID)
 					resp := ""
-					if message.Text == "1" {
-						resp = "UserID:" + event.Source.UserID
-					} else {
-						resp = `選單如下 \n 
-								1. 查詢使用者ID
-								
-								`
+					switch message.Text {
+					case "1.", "1":
+						{
+							resp = "UserID:" + event.Source.UserID
+						}
+					default:
+						{
+							resp = `選單如下 %0D%0A
+										1. 查詢使用者ID %0D%0A
+										2. 還沒想到的功能 %0D%0A
+									`
+						}
 					}
+
 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(resp)).Do(); err != nil {
 						log.Print(err)
 					}
