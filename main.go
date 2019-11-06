@@ -24,6 +24,12 @@ func main() {
 	// }
 
 	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+
 	r.GET("/callback", func(c *gin.Context) {
 		events, err := bot.ParseRequest(c.Request)
 		if err != nil {
