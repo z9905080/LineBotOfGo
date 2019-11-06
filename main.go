@@ -42,9 +42,7 @@ func main() {
 		}
 		for _, event := range events {
 
-			for _, member := range event.Members {
-				log.Println("UserID:", member.UserID)
-			}
+			log.Println("UserID:", event.Source.UserID)
 
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
