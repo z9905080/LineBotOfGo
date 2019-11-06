@@ -41,10 +41,15 @@ func main() {
 			return
 		}
 		for _, event := range events {
+
+			for _, member := range event.Members {
+				log.Println("UserID:", member.UserID)
+			}
+
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
-					log.Println("ID:", message.ID)
+					log.Println("MsgID:", message.ID)
 					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.Text)).Do(); err != nil {
 						log.Print(err)
 					}
