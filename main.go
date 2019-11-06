@@ -48,7 +48,16 @@ func main() {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
 					log.Println("MsgID:", message.ID)
-					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.Text)).Do(); err != nil {
+					resp := ""
+					if message.Text == "1" {
+						resp = "UserID:" + event.Source.UserID
+					} else {
+						resp = `選單如下 \n 
+								1. 查詢使用者ID
+								
+								`
+					}
+					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(resp)).Do(); err != nil {
 						log.Print(err)
 					}
 				}
