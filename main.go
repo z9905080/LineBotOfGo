@@ -29,16 +29,18 @@ func main() {
 	// }
 
 	dataMap := map[string]AccountST{
-		"U3fbaefa437ebd2c4d89c79b898ef5129": AccountST{Account: "20190881", Password: "a9906296"},       //Shouting
-		"U8ba30807b36213e65214d9c894b10b73": AccountST{Account: "20190883", Password: "00000000"},       // Ray
-		"U4cf6460eab6a5a60eb19221bdf2a816b": AccountST{Account: "20190982", Password: "blue0981944899"}, // 藍
-		"U73989a4a17ea8a26a5cc774b7c66347c": AccountST{Account: "20190481", Password: "www714556"},      // 貴軒
-		"Uc354ea11210fcc33ea09e89240235879": AccountST{Account: "20190884", Password: "ab8063352l"},     // 松儒
-		"U9bb4d80b44bfcf04c4de3e8bbc7510c4": AccountST{Account: "20190882", Password: "qwe123"},         // Shank
-		"Ue4a925aed5130d864eb77a4bc8fa1932": AccountST{Account: "20190682", Password: "111450"},         // DINDIN
-		"Ua6cc33837be8bc6a55b2c3e190e897d1": AccountST{Account: "20190885", Password: "2lgidoal"},       // Kevin
-		"Udbf9c361db4c8ca4e6c98f52f983c2e1": AccountST{Account: "20190781", Password: "hln06012"},       // 企鵝
-		"Ua67e25918327a060f2d5a7105a8f8a1d": AccountST{Account: "20190981", Password: "j4163010"},       // 翠翠子
+		"U3fbaefa437ebd2c4d89c79b898ef5129": {Account: "20190881", Password: "a9906296"},       // Shouting
+		"U8ba30807b36213e65214d9c894b10b73": {Account: "20190883", Password: "00000000"},       // Ray
+		"U4cf6460eab6a5a60eb19221bdf2a816b": {Account: "20190982", Password: "blue0981944899"}, // 藍
+		"U73989a4a17ea8a26a5cc774b7c66347c": {Account: "20190481", Password: "www714556"},      // 貴軒
+		"Uc354ea11210fcc33ea09e89240235879": {Account: "20190884", Password: "ab8063352l"},     // 松儒
+		"U9bb4d80b44bfcf04c4de3e8bbc7510c4": {Account: "20190882", Password: "qwe123"},         // Shank
+		"Ue4a925aed5130d864eb77a4bc8fa1932": {Account: "20190682", Password: "111450"},         // DINDIN
+		"Ua6cc33837be8bc6a55b2c3e190e897d1": {Account: "20190885", Password: "2lgidoal"},       // Kevin
+		"Udbf9c361db4c8ca4e6c98f52f983c2e1": {Account: "20190781", Password: "hln06012"},       // 企鵝
+		"Ua67e25918327a060f2d5a7105a8f8a1d": {Account: "20190981", Password: "j4163010"},       // 翠翠子
+		"U8dbfd56afd8b693938b74ecb712bf424": {Account: "20200282", Password: "GARYgary2020"},   // Gary
+		"U8f68f3a3dd4958f266f130ecd1e86561": {Account: "20200281", Password: "Max0958828605"},  // 建仲
 	}
 
 	r := gin.Default()
