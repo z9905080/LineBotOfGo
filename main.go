@@ -75,6 +75,12 @@ func main() {
 								resp += "?account=" + data.Account + "&password=" + data.Password
 							}
 						}
+					case "#拜託給我加入":
+						{
+							resp = "既然你誠心誠意的發問了，我就給你ID吧\n" +
+								"ID: " + event.Source.UserID +
+								"\n去找我的徒弟 Shouting 把ID給他"
+						}
 					default:
 						{
 							resp = message.Text
