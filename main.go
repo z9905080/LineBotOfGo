@@ -41,6 +41,7 @@ func main() {
 		"Ua67e25918327a060f2d5a7105a8f8a1d": {Account: "20190981", Password: "j4163010"},       // 翠翠子
 		"U8dbfd56afd8b693938b74ecb712bf424": {Account: "20200282", Password: "GARYgary2020"},   // Gary
 		"U8f68f3a3dd4958f266f130ecd1e86561": {Account: "20200281", Password: "Max0958828605"},  // 建仲
+		"Ub8c9b012af988e6215f2c3b42ce2aada": {Account: "20200381", Password: "a1030410304"},    // 建仲
 	}
 
 	r := gin.Default()
